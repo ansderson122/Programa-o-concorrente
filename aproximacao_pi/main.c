@@ -2,7 +2,7 @@
 #include <omp.h>
 #include <stdlib.h>
 #include <time.h>
-
+ 
 void main(){
     int num_steps = 100000000;
     double step;
