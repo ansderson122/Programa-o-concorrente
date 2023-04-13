@@ -53,12 +53,16 @@ void main(){
 
     #pragma omp parallel num_threads(4)
         {
-            #pragma omp for reduction(+:ocorrencias)
+            int tem = 0;
+            #pragma omp for 
             for (long int i = 0; i < tamanhoVetor; i++){
                 if (vetor[i] == x){
-                    ocorrencias++;
+                    tem++;
                 }
             }
+
+            #pragma omp atomic
+                ocorrencias += tem; 
         } 
 
 

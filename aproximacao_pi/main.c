@@ -35,7 +35,7 @@ void main(){
     printf("inicio do paralelo \n");
     inicio = omp_get_wtime();
 
-    #pragma omp parallel private(x) num_threads(3)
+    #pragma omp parallel private(x) num_threads(4)
     {
         #pragma omp for reduction(+:sum)
         for (i=0;i<num_steps;i++){
