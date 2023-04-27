@@ -23,13 +23,7 @@ void main(){
     tempo_serial = fim - inicio;
     printf("o valor  e %.0f \n",soma);
     printf("Tempo  %f \n\n",tempo_serial);
-
-
-
     // fim do SERIAL ------------------------------------------
-
-  
-
 
     // inicio do paralelo ----------------------------------------
     soma = 0;
@@ -45,7 +39,6 @@ void main(){
             }
         }
     } 
-
 
     fim = omp_get_wtime();
     tempo_paralelo = fim - inicio;
