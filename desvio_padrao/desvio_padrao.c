@@ -1,8 +1,9 @@
+#include <math.h>
 #include <stdio.h>
 #include <omp.h>
 #include <stdlib.h>
 #include <time.h>
-#include <math.h>
+
 
 
 #define MAX 500000000
@@ -13,15 +14,15 @@ float *gerar_vetor(int n);
 void mostrar_vetor(float *v,int tamanho);
 
 void main() {
-    
+   
     time_t t;
     srand(time(NULL));
     float *vetor = NULL;
     float n = 0.3578;
     vetor = gerar_vetor(MAX);
     int i = 0;
-    float media,desvio,aux;
-    double soma = 0;
+    float media,desvio;
+    double soma = 0,aux;
     // incio do SERIAL ------------------------------------------
     printf("incio da serial \n");
     double inicio = omp_get_wtime();
